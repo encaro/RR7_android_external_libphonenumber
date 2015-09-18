@@ -85,3 +85,17 @@ LOCAL_SDK_VERSION := current
 LOCAL_STATIC_JAVA_LIBRARIES := libphonenumber
 LOCAL_JAVA_LANGUAGE_VERSION := 1.7
 include $(BUILD_STATIC_JAVA_LIBRARY)
+
+# Tests for unbundled use.
+# vogar --timeout 0 --classpath out/target/common/obj/JAVA_LIBRARIES/libphonenumber_intermediates/classes.jar \
+#   --classpath out/target/common/obj/JAVA_LIBRARIES/libphonenumber-test_intermediates/classes.jar \
+#   com.google.i18n.phonenumbers
+include $(CLEAR_VARS)
+LOCAL_MODULE := libphonenumber-test
+LOCAL_MODULE_TAGS := optional
+LOCAL_SRC_FILES := $(libphonenumber_test_files)
+LOCAL_JAVA_RESOURCE_DIRS := $(libphonenumber_test_resource_dirs)
+LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
+LOCAL_SDK_VERSION := current
+LOCAL_JAVA_LIBRARIES := libphonenumber
+include $(BUILD_STATIC_JAVA_LIBRARY)
