@@ -59,6 +59,7 @@ LOCAL_NO_STANDARD_LIBRARIES := true
 LOCAL_JAVA_LIBRARIES := core-oj core-libart
 LOCAL_JAVA_LANGUAGE_VERSION := 1.7
 LOCAL_STATIC_JAVA_LIBRARIES := libprotobuf-java-nano
+LOCAL_JAVA_LANGUAGE_VERSION := 1.7
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 # For unbundled use, supports gingerbread and up.
@@ -87,6 +88,7 @@ LOCAL_SDK_VERSION := current
 LOCAL_STATIC_JAVA_LIBRARIES := libphonenumber
 LOCAL_JAVA_LANGUAGE_VERSION := 1.7
 LOCAL_STATIC_JAVA_LIBRARIES := libprotobuf-java-nano
+LOCAL_JAVA_LANGUAGE_VERSION := 1.7
 include $(BUILD_STATIC_JAVA_LIBRARY)
 
 # Tests for unbundled use.
@@ -101,4 +103,5 @@ LOCAL_JAVA_RESOURCE_DIRS := $(libphonenumber_test_resource_dirs)
 LOCAL_ADDITIONAL_DEPENDENCIES := $(LOCAL_PATH)/Android.mk
 LOCAL_SDK_VERSION := current
 LOCAL_STATIC_JAVA_LIBRARIES := libphonenumber libprotobuf-java-nano
+LOCAL_JAVA_LANGUAGE_VERSION := 1.7
 include $(BUILD_STATIC_JAVA_LIBRARY)
